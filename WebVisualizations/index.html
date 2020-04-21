@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>City Weather Visualizations</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: whitesmoke; overflow-x: hidden;">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <div class="container-fullwidth">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="color: rgba(25, 163, 218, 0.836); background-color: white; padding-top: 0px; padding-bottom: 0px;">
+            <a class="navbar-brand btn btn-lg" href="#" style="color: white; background-color: rgba(25, 163, 218, 0.836); padding-top: 15px; padding-bottom: 15px; border-radius: 0px;">Latitude</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown" style="color: rgba(25, 163, 218, 0.836); text-align: right;">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resources/data.html">Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resources/comparison.html">Comparison</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plots
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="Resources/max_temp_html.html">Max Temperature</a>
+                            <a class="dropdown-item" href="Resources/humidity.html">Humidity</a>
+                            <a class="dropdown-item" href="Resources/cloudiness.html">Cloudiness</a>
+                            <a class="dropdown-item" href="Resources/wind_speed.html">Wind Speed</a>
+                        </div>
+                    </li>
+            </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-6 landing-summary" style="background: white;">
+            <div class="container">
+                <h1 class="mt-0" style="color: rgba(25, 163, 218, 0.836);">Summary: Latitude vs. X<hr/></h1>
+                <img src="Resources/assets/LatvTemp.png" class="img-fluid float-left landing-summary-pic" alt="Sample Weather PNG">
+                <p style="padding-left: 20px;" class="text-justify">
+                The purpose of this project was to analyze how a city's weather changes based on a city's distance from the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.
+                </p>
+                <p style="padding-bottom: 20px; padding-left: 20px;" class="text-justify">
+                After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4 landing-viz">    
+            <div class="container">
+                <h3 style="color: rgba(25, 163, 218, 0.836);">Visualizations<hr/></h3>
+                <div class="d-flex align-content-center flex-wrap p-3 d-inline-block">
+                    <a href="Resources/max_temp_html.html"><img src="Resources/assets/LatvTemp.png" alt="Latitude vs. Tempurature" class="img-responsive viz-links img-fluid"></a>
+                    <a href="Resources/humidity.html"><img src="Resources/assets/LatvHum.png" alt="Latitude vs. Humidity" class="img-responsive viz-links img-fluid"></a>
+                    <a href="Resources/cloudiness.html"><img src="Resources/assets/LatvCloud.png" alt="Latitude vs. Cloudiness" class="img-responsive viz-links img-fluid"></a>
+                    <a href="Resources/wind_speed.html"><img src="Resources/assets/LatvWind.png" alt="Latitude vs. Wind" class="img-responsive viz-links img-fluid"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="row">
+        <div class="col-12 col-md-7 landing-summary">
+            <div class="container" style="background-color: white;">
+                <h1 class="mt-0" style="color: rgba(25, 163, 218, 0.836);">Summary: Latitude vs. X<hr/></h1>
+                <img src="Resources/assets/LatvTemp.png" class="img-fluid float-left landing-summary-pic" alt="Sample Weather PNG">
+                <p style="padding-left: 20px;" class="text-justify">
+                The purpose of this project was to analyze how a city's weather changes based on a city's distance from the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.
+                </p>
+                <p style="padding-bottom: 20px; padding-left: 20px;" class="text-justify">
+                After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4 landing-viz">
+            <div class="container">
+                <h3 style="color: rgba(25, 163, 218, 0.836);">Visualizations<hr/></h3>
+                <div class="d-flex align-content-center flex-wrap w-auto p-3 h-auto d-inline-block">
+                    <a href="Resources/max_temp_html.html"><img src="Resources/assets/LatvTemp.png" alt="Latitude vs. Tempurature" class="img-responsive viz-links"></a>
+                    <a href="Resources/humidity.html"><img src="Resources/assets/LatvHum.png" alt="Latitude vs. Humidity" class="img-responsive viz-links"></a>
+                    <a href="Resources/cloudiness.html"><img src="Resources/assets/LatvCloud.png" alt="Latitude vs. Cloudiness" class="img-responsive viz-links"></a>
+                    <a href="Resources/wind_speed.html"><img src="Resources/assets/LatvWind.png" alt="Latitude vs. Wind" class="img-responsive viz-links"></a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+</body>
+
+</html>

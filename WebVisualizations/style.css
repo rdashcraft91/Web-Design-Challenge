@@ -1,0 +1,75 @@
+.landing-summary{
+    padding: 20px;
+    margin-left: 50px;
+    margin-top: 55px;
+    margin-right: 25px;
+    line-height: 2;
+    color: rgba(27, 24, 24, 0.644);
+}
+
+.landing-summary-pic{
+    height: 225px;
+    width: 300px;
+}
+
+.landing-viz{
+    padding: 10px;
+    margin-right: 50px;
+    margin-top: 55px;
+    background: white;
+}
+
+.viz-links{
+    height: 150px;
+    width: 200px;
+    padding: 0px;
+}
+
+.dont-pad-me{
+    padding: 0px
+}
+
+.no-margins-please{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+}
+
+.data-header{
+    float: none;
+    margin: auto;
+    margin-top: 50px;
+    background: white;
+    padding: 20px;
+}
+
+.data-table{
+    float: none;
+    margin: auto;
+}
+
+.comparison-header{
+    margin-top: 50px;
+    background: white;
+    margin-bottom: 0px;
+}
+
+.comparison-charts{
+    background: white;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.comparison-images{
+    width: 400px;
+    height: 300px;
+    min-width: 300px;
+    min-height: 200px;
+}
+
+.comp-viz{
+    padding: 10px;
+    margin-top: 55px;
+    background: white;
+}
